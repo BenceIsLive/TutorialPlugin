@@ -1,9 +1,6 @@
 package dev.bence.tutorial;
 
-import dev.bence.tutorial.Commands.GiveCommand;
-import dev.bence.tutorial.Commands.HealCommand;
-import dev.bence.tutorial.Commands.KitCommand;
-import dev.bence.tutorial.Commands.MenuCommand;
+import dev.bence.tutorial.Commands.*;
 import dev.bence.tutorial.Events.InventoryEvent;
 import dev.bence.tutorial.Events.JoinEvent;
 import dev.bence.tutorial.Events.LeaveEvent;
@@ -24,6 +21,7 @@ public final class Tutorial extends JavaPlugin {
         getCommand("geef").setExecutor(new GiveCommand());
         getCommand("kit").setExecutor(new KitCommand());
         getCommand("menu").setExecutor(new MenuCommand());
+        getCommand("stats").setExecutor(new StatsCommand());
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);

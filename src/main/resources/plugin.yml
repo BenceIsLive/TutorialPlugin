@@ -14,3 +14,5 @@ commands:
     description: geef kit jezelf
   menu:
     description: opent een gui
+  stats:
+    description: hier kun jij je stats ziene
