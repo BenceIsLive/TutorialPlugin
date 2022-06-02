@@ -16,3 +16,5 @@ commands:
     description: opent een gui
   stats:
     description: hier kun jij je stats ziene
+  vlieg:
+    description: zet vliegen aan of uit

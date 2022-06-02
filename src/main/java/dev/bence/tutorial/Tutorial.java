@@ -22,6 +22,7 @@ public final class Tutorial extends JavaPlugin {
         getCommand("kit").setExecutor(new KitCommand());
         getCommand("menu").setExecutor(new MenuCommand());
         getCommand("stats").setExecutor(new StatsCommand());
+        getCommand("vlieg").setExecutor(new FlyCommand());
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);
