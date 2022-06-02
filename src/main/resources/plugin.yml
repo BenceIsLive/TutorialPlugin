@@ -18,3 +18,5 @@ commands:
     description: hier kun jij je stats ziene
   vlieg:
     description: zet vliegen aan of uit
+  gamemodes:
+    description: Switch gamemode

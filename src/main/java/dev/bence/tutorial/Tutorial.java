@@ -23,6 +23,7 @@ public final class Tutorial extends JavaPlugin {
         getCommand("menu").setExecutor(new MenuCommand());
         getCommand("stats").setExecutor(new StatsCommand());
         getCommand("vlieg").setExecutor(new FlyCommand());
+        getCommand("gamemodes").setExecutor(new GamemodeCommand());
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);
