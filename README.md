@@ -1,4 +1,4 @@
 # TutorialPlugin
 
 To do:
-- Add tab completer!
+- Make server selector GUI
