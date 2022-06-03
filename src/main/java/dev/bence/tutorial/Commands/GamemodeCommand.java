@@ -40,7 +40,6 @@ public class GamemodeCommand implements CommandExecutor, TabCompleter {
             }
                 return false;
             }
-
         return false;
     }
 
