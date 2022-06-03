@@ -1,14 +1,20 @@
 package dev.bence.tutorial.Commands;
 
+import com.google.common.collect.Lists;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-public class GamemodeCommand implements CommandExecutor {
+import java.awt.*;
+import java.util.Arrays;
+import java.util.List;
+
+public class GamemodeCommand implements CommandExecutor, TabCompleter {
 
 
     @Override
@@ -31,12 +37,25 @@ public class GamemodeCommand implements CommandExecutor {
                 } else {
                     player.sendMessage(ChatColor.RED + "Gebruik /gamemodes survival/creative/adventure");
                 }
-
-            } else {
-                player.sendMessage(ChatColor.RED + "Gebruik /gamemodes (gamemode))");
             }
                 return false;
             }
+
         return false;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
+
+        List<String> arguments = Arrays.asList("survival", "creative", "adventure");
+        List<String> Flist = Lists.newArrayList();
+        if (args.length == 1) {
+            for (String s : arguments) {
+                if (s.toLowerCase().startsWith(args[0].toLowerCase())) Flist.add(s);
+            }
+            return Flist;
+        }
+        return null;
+
     }
 }
