@@ -20,3 +20,5 @@ commands:
     description: zet vliegen aan of uit
   gamemodes:
     description: Switch gamemode
+  selector:
+    description: selector
