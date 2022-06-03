@@ -34,8 +34,11 @@ public class GamemodeCommand implements CommandExecutor, TabCompleter {
                 } else if (args[0].equalsIgnoreCase("adventure")) {
                     player.sendMessage(ChatColor.GREEN + "Je bent nu gamemode adventure!");
                     player.setGameMode(GameMode.ADVENTURE);
+                } else if (args[0].equalsIgnoreCase("spectator")) {
+                    player.sendMessage(ChatColor.GREEN + "Je bent nu gamemode spectator!");
+                    player.setGameMode(GameMode.SPECTATOR);
                 } else {
-                    player.sendMessage(ChatColor.RED + "Gebruik /gamemodes survival/creative/adventure");
+                    player.sendMessage(ChatColor.RED + "Gebruik /gamemodes survival/creative/adventure/spectator");
                 }
             }
                 return false;
@@ -46,7 +49,7 @@ public class GamemodeCommand implements CommandExecutor, TabCompleter {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
 
-        List<String> arguments = Arrays.asList("survival", "creative", "adventure");
+        List<String> arguments = Arrays.asList("survival", "creative", "adventure", "spectator");
         List<String> Flist = Lists.newArrayList();
         if (args.length == 1) {
             for (String s : arguments) {
