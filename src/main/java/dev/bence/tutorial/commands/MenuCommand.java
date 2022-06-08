@@ -1,6 +1,6 @@
-package dev.bence.tutorial.Commands;
+package dev.bence.tutorial.commands;
 
-import dev.bence.tutorial.Menu.FirstMenu;
+import dev.bence.tutorial.menu.FirstMenu;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

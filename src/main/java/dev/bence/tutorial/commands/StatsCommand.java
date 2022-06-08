@@ -1,12 +1,12 @@
-package dev.bence.tutorial.Commands;
+package dev.bence.tutorial.commands;
 
-import dev.bence.tutorial.Menu.SelectorMenu;
+import dev.bence.tutorial.menu.StatsMenu;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SelectorCommand implements CommandExecutor {
+public class StatsCommand implements CommandExecutor {
 
 
     @Override
@@ -16,7 +16,7 @@ public class SelectorCommand implements CommandExecutor {
             Player player = (Player) sender;
 
             // OPEN THE MENU
-            new SelectorMenu(player);
+            new StatsMenu(player);
 
 
         }

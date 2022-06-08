@@ -1,4 +1,4 @@
-package dev.bence.tutorial.Commands;
+package dev.bence.tutorial.commands;
 
 import dev.bence.tutorial.Tutorial;
 import org.bukkit.command.Command;

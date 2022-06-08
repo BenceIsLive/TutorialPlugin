@@ -1,4 +1,4 @@
-package dev.bence.tutorial.Commands;
+package dev.bence.tutorial.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

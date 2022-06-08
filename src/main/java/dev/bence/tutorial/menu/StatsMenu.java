@@ -1,4 +1,4 @@
-package dev.bence.tutorial.Menu;
+package dev.bence.tutorial.menu;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

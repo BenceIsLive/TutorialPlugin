@@ -1,16 +1,14 @@
-package dev.bence.tutorial.Commands;
+package dev.bence.tutorial.commands;
 
 import com.google.common.collect.Lists;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 

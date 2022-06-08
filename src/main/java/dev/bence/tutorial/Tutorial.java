@@ -1,7 +1,7 @@
 package dev.bence.tutorial;
 
-import dev.bence.tutorial.Commands.*;
-import dev.bence.tutorial.Events.*;
+import dev.bence.tutorial.commands.*;
+import dev.bence.tutorial.events.*;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 

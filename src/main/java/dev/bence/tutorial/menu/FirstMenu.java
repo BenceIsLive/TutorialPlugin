@@ -1,5 +1,6 @@
-package dev.bence.tutorial.Menu;
+package dev.bence.tutorial.menu;
 
+import dev.bence.tutorial.libaries.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -18,15 +19,13 @@ public class FirstMenu {
 
         Inventory inv = Bukkit.createInventory(player, 27, ChatColor.RED + "First Menu");
 
-        ItemStack zwaard = new ItemStack(Material.IRON_SWORD, 1);
-        ItemMeta zwaardMeta = zwaard.getItemMeta();
-        zwaardMeta.setDisplayName(ChatColor.GOLD + "Kit");
-        ArrayList<String> zwaardLore = new ArrayList<>();
-        zwaardLore.add(ChatColor.GRAY + "Klik om een kit te krijgen");
-        zwaardMeta.setLore(zwaardLore);
-        zwaardMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-        zwaard.setItemMeta(zwaardMeta);
-        inv.setItem(11, zwaard);
+        ItemStack sword = new ItemBuilder(Material.STONE_SWORD)
+                .setName("Test")
+                .addLore("Klik om een kit te krijgen")
+                .build();
+        inv.setItem(11, sword);
+
+
 
         ItemStack heal = new ItemStack(Material.POPPY, 1);
         ItemMeta healMeta = heal.getItemMeta();
@@ -42,7 +41,7 @@ public class FirstMenu {
         speedMeta.setDisplayName(ChatColor.GOLD + "Speed");
         ArrayList<String> speedLore = new ArrayList<>();
         speedLore.add(ChatColor.GRAY + "Klik om speed te krijgen");
-        speedMeta.setLore(zwaardLore);
+        speedMeta.setLore(speedLore);
         speedMeta.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
         speed.setItemMeta(speedMeta);
         inv.setItem(15, speed);

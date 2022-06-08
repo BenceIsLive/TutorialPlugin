@@ -1,4 +1,4 @@
-package dev.bence.tutorial.Events;
+package dev.bence.tutorial.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -28,7 +28,7 @@ public class InventoryEvent implements Listener {
                         player.sendMessage("Je bent volledig geheald!");
                     break;
                 case 15: // speed
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 300, 2));
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20*600, 2));
                     player.sendMessage("Je hebt nu speed 2 voor 5 minuten!");
                     break;
                 default:
