@@ -22,3 +22,5 @@ commands:
     description: Switch gamemode
   selector:
     description: selector
+  config:
+    description: array etc

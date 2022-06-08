@@ -22,13 +22,17 @@ public final class Tutorial extends JavaPlugin {
         getCommand("vlieg").setExecutor(new FlyCommand());
         getCommand("gamemodes").setExecutor(new GamemodeCommand());
         getCommand("selector").setExecutor(new SelectorCommand());
+        getCommand("config").setExecutor(new ConfigCommand(this));
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);
         this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         this.getServer().getPluginManager().registerEvents(new LeaveEvent(), this);
         this.getServer().getPluginManager().registerEvents(new InventoryEvent(), this);
-        this.getServer().getPluginManager().registerEvents(new SelectorEvent(), this);
+
+        // YML FILES
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
 
     }
 
