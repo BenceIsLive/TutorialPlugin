@@ -36,6 +36,5 @@ public final class Tutorial extends JavaPlugin {
         // YML FILES
         getConfig().options().copyDefaults(true);
         saveConfig();
-
     }
 }
