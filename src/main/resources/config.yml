@@ -24,3 +24,8 @@ GUI:
       -
 motd: 'de server ziet er goed uit!'
 max-players: 25
+
+messages:
+  - Hello world!
+  - Tip - Change this message!
+delay: 300
