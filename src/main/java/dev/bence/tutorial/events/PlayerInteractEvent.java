@@ -21,6 +21,7 @@ public class PlayerInteractEvent implements Listener {
 
             } else if (e.getItem().getType().equals(Material.IRON_HOE)) {
 
+
                 player.launchProjectile(Egg.class);
 
             }
