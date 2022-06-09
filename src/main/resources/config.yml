@@ -1,8 +1,26 @@
-Word:
-Number:
-Boolean:
-
-String-list:
-  - Value 1
-  - Value 2
-  - Value 3
+join-message: '&a%player% &fis de server gejoined!'
+join-item:
+  give-item: true
+  material: 'DIAMOND'
+  amount: 1
+GUI:
+  item1:
+    displayname: 'Iron sword'
+    material: 'IRON_SWORD'
+    amount: 1
+    commands:
+      - kit
+  item2:
+    displayname: 'Heal'
+    material: 'POPPY'
+    amount: 1
+    commands:
+      -
+  item3:
+    displayname: 'Speed'
+    material: 'SPLASH_POTION'
+    amount: 1
+    commands:
+      -
+motd: 'de server ziet er goed uit!'
+max-players: 25

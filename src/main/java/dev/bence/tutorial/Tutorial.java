@@ -22,23 +22,20 @@ public final class Tutorial extends JavaPlugin {
         getCommand("vlieg").setExecutor(new FlyCommand());
         getCommand("gamemodes").setExecutor(new GamemodeCommand());
         getCommand("selector").setExecutor(new SelectorCommand());
-        getCommand("config").setExecutor(new ConfigCommand(this));
+        getCommand("setjoinmessage").setExecutor(new SetJoinMessageCommand());
+        getCommand("reload").setExecutor(new ReloadCommand());
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);
         this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         this.getServer().getPluginManager().registerEvents(new LeaveEvent(), this);
         this.getServer().getPluginManager().registerEvents(new InventoryEvent(), this);
+        this.getServer().getPluginManager().registerEvents(new PingEvent(), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerInteractEvent(), this);
 
         // YML FILES
-        getConfig().options().copyDefaults();
-        saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
 
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-        System.out.println(ChatColor.RED + "Plugin disabled");
     }
 }

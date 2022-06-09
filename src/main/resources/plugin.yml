@@ -24,3 +24,7 @@ commands:
     description: selector
   config:
     description: array etc
+  setjoinmessage:
+    description: zet het welkoms bericht
+  reload:
+    description: reload de plugin
