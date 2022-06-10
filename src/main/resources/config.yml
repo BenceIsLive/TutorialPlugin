@@ -25,7 +25,14 @@ GUI:
 motd: 'de server ziet er goed uit!'
 max-players: 25
 
+
+announcements:
+  - "&fMake sure too join our discord! &ediscord.gg/?"
+  - "&fMake sure too check out our store! store.example.com"
+  - "&fCan make as many of these as you want!"
 messages:
-  - Hello world!
+  - Hello World!
   - Tip - Change this message!
-delay: 300
+
+#In seconds (5mins = 300)
+delay: 10

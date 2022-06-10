@@ -2,15 +2,26 @@ package dev.bence.tutorial;
 
 import dev.bence.tutorial.commands.*;
 import dev.bence.tutorial.events.*;
+import dev.bence.tutorial.task.BroadcastManager;
+import lombok.Getter;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public final class Tutorial extends JavaPlugin {
+
+    public static Tutorial instance;
+
+    @Getter
+    private BroadcastManager broadcastManager;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
         System.out.println(ChatColor.GREEN + "Plugin enabled");
+        instance = this;
 
+        registerManagers();
 
         // COMMANDS
         getCommand("heal").setExecutor(new HealCommand());
@@ -35,6 +46,10 @@ public final class Tutorial extends JavaPlugin {
         // YML FILES
         getConfig().options().copyDefaults(true);
         saveConfig();
-
     }
-}
+
+    private void registerManagers() {
+        broadcastManager = new BroadcastManager();
+    }
+    }
+
