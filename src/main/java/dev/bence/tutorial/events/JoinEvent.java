@@ -2,6 +2,7 @@ package dev.bence.tutorial.events;
 
 import dev.bence.tutorial.Tutorial;
 import dev.bence.tutorial.utils.ChatUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -29,6 +30,7 @@ public class JoinEvent implements Listener {
 
         if(tutorial.getConfig().getBoolean("join-item.give-item")) {
             player.getInventory().addItem(joinItem);
+
         }
     }
 }
