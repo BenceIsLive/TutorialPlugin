@@ -11,7 +11,7 @@ import java.io.File;
 public final class Tutorial extends JavaPlugin {
 
     public static Tutorial instance;
-
+    int interval = getConfig().getInt("interval") * 20;
 
     @Override
     public void onEnable() {
@@ -19,9 +19,6 @@ public final class Tutorial extends JavaPlugin {
         System.out.println(ChatColor.GREEN + "Plugin enabled");
 
 
-        int interval = getConfig().getInt("interval") * 20;
-
-        new BroadcastTimer(this).runTaskTimer(this, 0, interval);
 
 
         // COMMANDS
@@ -47,8 +44,9 @@ public final class Tutorial extends JavaPlugin {
         // YML FILES
         if (!new File(getDataFolder(), "config.yml").exists());
         saveDefaultConfig();
-//        getConfig().options().copyDefaults(true);
-//        saveConfig();
+
+        new BroadcastTimer(this).runTaskTimer(this, 0, interval);
 
     }
+
 }

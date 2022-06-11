@@ -7,45 +7,27 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class BroadcastTimer extends BukkitRunnable {
 
     private List<String> messages;
-    private boolean random;
-    private int lastMessages;
-
+    private int interval;
+    private int message_index = 0;
     public BroadcastTimer(Tutorial plugin)
     {
-        this.random = plugin.getConfig().getBoolean("random");
         this.messages = plugin.getConfig().getStringList("messages");
+        this.interval = plugin.getConfig().getInt("interval");
     }
 
     @Override
     public void run() {
+        if (message_index == messages.size()) {
+            message_index = 0;
 
-        String message = "";
-
-        if (!random) {
-
-            try {
-                message = messages.get(lastMessages + 1);
-                lastMessages++;
-            } catch (ArrayIndexOutOfBoundsException e)
-            {
-                message = messages.get(0);
-                lastMessages = 0;
-            }
-        } else
-        {
-            Random random = new Random();
-            int nextMessage = random.nextInt(messages.size());
-            while (nextMessage == lastMessages)
-            {
-                random.nextInt(messages.size());
-            }
-            message = messages.get(nextMessage);
-            lastMessages = nextMessage;
         }
+        Bukkit.broadcastMessage(messages.get(message_index));
+        message_index++;
 
     }
 }
