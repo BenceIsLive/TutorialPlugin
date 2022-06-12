@@ -1,5 +1,6 @@
 package dev.bence.tutorial.libaries;
 
+import dev.bence.tutorial.Tutorial;
 import dev.bence.tutorial.utils.ChatUtils;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -7,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,6 +137,9 @@ public class ItemBuilder {
 
         if(lore.size() > 0) {
             itemMeta.setLore(lore);
+        }
+        if (persistentDataKey != null) {
+            itemMeta.getPersistentDataContainer().set(new NamespacedKey(Tutorial.getInstance(), persistentDataKey), PersistentDataType.STRING, persistentDataValue);
         }
 
         itemStack.setItemMeta(itemMeta);

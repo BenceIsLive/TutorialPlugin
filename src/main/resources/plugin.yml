@@ -6,10 +6,8 @@ api-version: 1.18
 commands:
   heal:
     description: Speler wordt geheald.
-    aliases: [genees]
   geef:
     description: Geef commando
-    aliases: [give]
   kit:
     description: geef kit jezelf
   menu:
@@ -22,9 +20,9 @@ commands:
     description: Switch gamemode
   selector:
     description: selector
-  config:
-    description: array etc
   setjoinmessage:
     description: zet het welkoms bericht
   reload:
     description: reload de plugin
+  punish:
+    description: lol

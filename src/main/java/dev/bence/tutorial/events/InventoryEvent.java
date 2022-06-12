@@ -1,5 +1,6 @@
 package dev.bence.tutorial.events;
 
+import dev.bence.tutorial.utils.ChatUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

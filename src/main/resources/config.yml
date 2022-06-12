@@ -22,6 +22,12 @@ GUI:
     amount: 1
     commands:
       -
+  item4:
+    displayname: 'Ban'
+    material: 'SPLASH_POTION'
+    amount: 1
+    commands:
+      -
 motd: 'de server ziet er goed uit!'
 max-players: 25
 

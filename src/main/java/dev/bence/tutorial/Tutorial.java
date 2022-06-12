@@ -17,8 +17,7 @@ public final class Tutorial extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         System.out.println(ChatColor.GREEN + "Plugin enabled");
-
-
+        instance = this;
 
 
         // COMMANDS
@@ -32,6 +31,7 @@ public final class Tutorial extends JavaPlugin {
         getCommand("selector").setExecutor(new SelectorCommand());
         getCommand("setjoinmessage").setExecutor(new SetJoinMessageCommand());
         getCommand("reload").setExecutor(new ReloadCommand());
+        getCommand("punish").setExecutor(new PunishCommand());
 
         //EVENTS
         this.getServer().getPluginManager().registerEvents(new TestEvent(), this);
@@ -40,6 +40,7 @@ public final class Tutorial extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new InventoryEvent(), this);
         this.getServer().getPluginManager().registerEvents(new PingEvent(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerInteractEvent(), this);
+        this.getServer().getPluginManager().registerEvents(new PunishEvent(), this);
 
         // YML FILES
         if (!new File(getDataFolder(), "config.yml").exists());
@@ -49,4 +50,7 @@ public final class Tutorial extends JavaPlugin {
 
     }
 
+    public static Tutorial getInstance() {
+        return instance;
+    }
 }
